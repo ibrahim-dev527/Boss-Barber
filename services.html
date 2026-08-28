@@ -52,43 +52,42 @@
     /* ========================================
        TYPOGRAPHY
     ======================================== */
-    .eyebrow{font-family:var(--display);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px}
-    .eyebrow::before{content:'';width:26px;height:1px;background:var(--gold)}
+    .eyebrow{font-family:var(--display);font-weight:600;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center}
     h1,h2,h3{font-family:var(--display);font-weight:600;line-height:.94;letter-spacing:-.02em}
     .huge{font-size:clamp(3rem,9vw,8.2rem);font-weight:700}
     .lede{font-size:clamp(1.05rem,1.6vw,1.35rem);color:var(--cream-dim);max-width:38ch;font-weight:400;line-height:1.5}
     /* ========================================
        NAVIGATION
     ======================================== */
-    .site-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);display:flex;align-items:center;transition:background .5s var(--ease),border-color .5s var(--ease),backdrop-filter .5s var(--ease)}
+    .site-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);display:flex;align-items:center;transition:background .5s var(--ease),box-shadow .5s var(--ease),backdrop-filter .5s var(--ease)}
     .site-nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
-    .site-nav.is-scrolled{background:rgba(18,17,16,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .site-nav.is-scrolled{background:rgba(18,17,16,.86);backdrop-filter:blur(14px);box-shadow:0 12px 30px -14px rgba(0,0,0,.6)}
     .brand{font-family:var(--display);font-weight:700;font-size:1.15rem;letter-spacing:.02em}
     .brand span{color:var(--gold)}
     .nav-links{display:flex;gap:2.4rem;align-items:center}
-    .nav-links a{font-size:.86rem;letter-spacing:.03em;color:var(--cream-dim);position:relative;padding:4px 0}
-    .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--cream)}
-    .nav-links a[aria-current="page"]::after{content:'';position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--gold)}
-    .nav-cta{border:1px solid var(--gold);color:var(--cream);padding:.62rem 1.3rem;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-family:var(--display);transition:background .3s var(--ease),color .3s var(--ease)}
-    .nav-cta:hover{background:var(--gold);color:var(--ink)}
+    .nav-links a{font-size:.86rem;letter-spacing:.03em;color:var(--cream-dim);font-weight:500;transition:color .3s var(--ease)}
+    .nav-links a:hover{color:var(--cream)}
+    .nav-links a[aria-current="page"]{color:var(--gold);font-weight:700}
+    .nav-cta{background:var(--gold);color:var(--ink);padding:.68rem 1.5rem;border-radius:999px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-family:var(--display);font-weight:600;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s var(--ease);box-shadow:0 8px 20px -8px rgba(183,147,91,.55)}
+    .nav-cta:hover{transform:translateY(-2px);box-shadow:0 12px 26px -8px rgba(183,147,91,.7)}
     .burger{display:none;flex-direction:column;gap:5px;width:32px;z-index:210}
-    .burger span{height:1.5px;background:var(--cream);width:100%;transition:transform .35s var(--ease),opacity .35s var(--ease)}
+    .burger span{height:1.5px;background:var(--cream);width:100%;border-radius:2px;transition:transform .35s var(--ease),opacity .35s var(--ease)}
     .mobile-menu{position:fixed;inset:0;background:var(--ink);z-index:190;display:flex;flex-direction:column;justify-content:center;padding:0 8vw;transform:translateY(-100%);transition:transform .55s var(--ease);}
     .mobile-menu.is-open{transform:translateY(0)}
-    .mobile-menu a{font-family:var(--display);font-size:2.4rem;font-weight:600;padding:.5rem 0;border-bottom:1px solid var(--line);color:var(--cream)}
-    .mobile-menu .m-cta{margin-top:2rem;display:inline-block;border:1px solid var(--gold);padding:.9rem 1.6rem;font-family:var(--display);letter-spacing:.1em;text-transform:uppercase;font-size:.85rem}
+    .mobile-menu a{font-family:var(--display);font-size:2.4rem;font-weight:600;padding:.55rem 0;color:var(--cream)}
+    .mobile-menu .m-cta{margin-top:1.6rem;display:inline-block;background:var(--gold);color:var(--ink);border-radius:999px;padding:.9rem 1.8rem;font-family:var(--display);letter-spacing:.08em;text-transform:uppercase;font-size:.85rem;font-weight:600}
     body.menu-open{overflow:hidden}
     @media (max-width:900px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
     /* ========================================
        BUTTONS
     ======================================== */
-    .btn{font-family:var(--display);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;padding:1rem 1.9rem;display:inline-flex;align-items:center;gap:.6rem;transition:transform .35s var(--ease),background .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease)}
-    .btn-solid{background:var(--gold);color:var(--ink)}
-    .btn-solid:hover{background:var(--cream);transform:translateY(-2px)}
-    .btn-outline{border:1px solid var(--line);color:var(--cream)}
-    .btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
-    .btn-dark{border:1px solid var(--line-dark);color:var(--ink)}
-    .btn-dark:hover{background:var(--ink);color:var(--cream)}
+    .btn{font-family:var(--display);font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:1rem 2.1rem;border-radius:999px;display:inline-flex;align-items:center;gap:.6rem;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease),color .35s var(--ease)}
+    .btn-solid{background:linear-gradient(135deg,#c9a267,var(--gold));color:var(--ink);box-shadow:0 10px 26px -10px rgba(183,147,91,.65)}
+    .btn-solid:hover{transform:translateY(-3px);box-shadow:0 16px 34px -10px rgba(183,147,91,.8)}
+    .btn-outline{background:rgba(243,238,228,.07);color:var(--cream);box-shadow:0 6px 18px -12px rgba(0,0,0,.5)}
+    .btn-outline:hover{background:var(--gold);color:var(--ink);transform:translateY(-3px);box-shadow:0 14px 28px -10px rgba(183,147,91,.55)}
+    .btn-dark{background:rgba(18,17,16,.08);color:var(--ink)}
+    .btn-dark:hover{background:var(--ink);color:var(--cream);transform:translateY(-3px)}
     /* ========================================
        SEAL / SIGNATURE MARK
     ======================================== */
@@ -118,19 +117,19 @@
     /* ========================================
        BACK TO TOP
     ======================================== */
-    .totop{position:fixed;left:22px;bottom:22px;z-index:180;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s var(--ease),border-color .3s;background:rgba(18,17,16,.6);backdrop-filter:blur(6px)}
+    .totop{position:fixed;left:22px;bottom:22px;z-index:180;width:44px;height:44px;border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s var(--ease),transform .3s var(--ease);background:rgba(243,238,228,.1);backdrop-filter:blur(6px);box-shadow:0 8px 20px -10px rgba(0,0,0,.6)}
     .totop.show{opacity:1;pointer-events:auto}
-    .totop:hover{border-color:var(--gold)}
+    .totop:hover{background:var(--gold);color:var(--ink);transform:translateY(-2px)}
     /* ========================================
        FOOTER
     ======================================== */
-    footer{background:var(--ink-soft);border-top:1px solid var(--line);padding-top:min(12vw,7rem)}
+    footer{background:var(--ink-soft);padding-top:min(12vw,7rem)}
     .foot-cta h2{font-size:clamp(2.6rem,7vw,6rem)}
-    .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem;padding:5rem 0 3rem;border-top:1px solid var(--line);margin-top:5rem}
+    .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem;padding:3.4rem 3vw;border-radius:24px;background:rgba(243,238,228,.035);margin-top:5rem}
     .foot-grid h4{font-family:var(--display);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem}
     .foot-grid a,.foot-grid p{color:var(--cream-dim);font-size:.92rem;display:block;margin-bottom:.55rem}
     .foot-grid a:hover{color:var(--cream)}
-    .foot-bottom{border-top:1px solid var(--line);padding:1.6rem 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.78rem;color:var(--cream-dim)}
+    .foot-bottom{padding:1.6rem 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.78rem;color:var(--cream-dim)}
     .foot-bottom span{color:var(--gold)}
     @media (max-width:800px){.foot-grid{grid-template-columns:1fr 1fr;row-gap:2.5rem}}
     /* ========================================
@@ -140,25 +139,25 @@
     @media (max-width:860px){.grid-2{grid-template-columns:1fr}}
 
 
-    .pg-hero{padding:calc(var(--nav-h) + 5rem) 0 4rem;border-bottom:1px solid var(--line)}
+    .pg-hero{padding:calc(var(--nav-h) + 5rem) 0 4rem}
     .pg-hero h1{font-size:clamp(3rem,9vw,7.5rem)}
     .pg-hero p{margin-top:1.4rem}
 
-    .svc-cat{padding:min(10vw,6rem) 0;border-bottom:1px solid var(--line)}
-    .svc-cat-head{display:grid;grid-template-columns:1fr 2fr;gap:3vw;margin-bottom:2.6rem}
+    .svc-cat{padding:min(7vw,4rem) 0}
+    .svc-cat-head{display:grid;grid-template-columns:1fr 2fr;gap:3vw;margin-bottom:1.8rem}
     .svc-cat-head h2{font-size:clamp(2.2rem,5vw,3.6rem)}
     .svc-cat-head .cat-num{font-family:var(--display);color:var(--gold);font-size:.85rem;letter-spacing:.14em}
     @media (max-width:800px){.svc-cat-head{grid-template-columns:1fr;gap:.6rem}}
 
-    .svc-list{display:grid;gap:0}
-    .svc-row{display:grid;grid-template-columns:1.6fr 2.2fr auto auto;align-items:center;gap:2rem;padding:1.7rem 0;border-top:1px solid var(--line)}
-    .svc-row:last-child{border-bottom:1px solid var(--line)}
+    .svc-list{display:grid;gap:.9rem}
+    .svc-row{display:grid;grid-template-columns:1.6fr 2.2fr auto auto;align-items:center;gap:2rem;padding:1.5rem 1.8rem;border-radius:18px;background:rgba(243,238,228,.035);transition:background .3s var(--ease)}
+    .svc-row:hover{background:rgba(243,238,228,.07)}
     .svc-name{font-family:var(--display);font-size:1.3rem;font-weight:600}
     .svc-desc{color:var(--cream-dim);font-size:.92rem;max-width:44ch}
     .svc-price{font-family:var(--display);color:var(--gold);font-size:.85rem;letter-spacing:.06em;white-space:nowrap}
-    @media (max-width:800px){.svc-row{grid-template-columns:1fr;gap:.5rem;padding:1.4rem 0}.svc-row .btn{justify-self:start;margin-top:.4rem}}
+    @media (max-width:800px){.svc-row{grid-template-columns:1fr;gap:.5rem;padding:1.3rem 1.4rem}.svc-row .btn{justify-self:start;margin-top:.4rem}}
 
-    .svc-note{margin:4rem 0 0;padding:2rem;border:1px dashed var(--line);font-size:.9rem;color:var(--cream-dim);max-width:60ch}
+    .svc-note{margin:3rem 0 0;padding:1.8rem 2rem;border-radius:18px;background:rgba(243,238,228,.035);font-size:.9rem;color:var(--cream-dim);max-width:60ch}
 
 </style>
 </head>
@@ -178,7 +177,7 @@
         <a href="booking.html" >Booking</a>
         <a href="contact.html" >Contact</a>
       </div>
-      <a href="booking.html" class="nav-cta">Book a Cut</a>
+      <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%20would%20like%20to%20book%20a%20haircut.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="nav-cta">Book a Cut</a>
       <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
@@ -192,7 +191,7 @@
     <a href="about.html">About</a>
     <a href="booking.html">Booking</a>
     <a href="contact.html">Contact</a>
-    <a href="booking.html" class="m-cta">Book a Cut</a>
+    <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%20would%20like%20to%20book%20a%20haircut.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="m-cta">Book a Cut</a>
   </div>
 
 
@@ -218,35 +217,35 @@
           <div class="svc-name">Fade</div>
           <div class="svc-desc">A graduated blend from skin to length, tapered clean around the edges.</div>
           <div class="svc-price">Price on Request</div>
-          <a href="booking.html" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
+          <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%27d%20like%20to%20book%20Fade.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
         </div>
 
         <div class="svc-row reveal">
           <div class="svc-name">Low Fade</div>
           <div class="svc-desc">A subtle taper that keeps more length up top, blended low near the neckline.</div>
           <div class="svc-price">Price on Request</div>
-          <a href="booking.html" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
+          <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%27d%20like%20to%20book%20Low%20Fade.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
         </div>
 
         <div class="svc-row reveal">
           <div class="svc-name">Mid Fade</div>
           <div class="svc-desc">A balanced fade starting mid-head, our most requested profile.</div>
           <div class="svc-price">Price on Request</div>
-          <a href="booking.html" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
+          <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%27d%20like%20to%20book%20Mid%20Fade.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
         </div>
 
         <div class="svc-row reveal">
           <div class="svc-name">High Fade</div>
           <div class="svc-desc">A sharp, high-contrast fade for maximum definition.</div>
           <div class="svc-price">Price on Request</div>
-          <a href="booking.html" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
+          <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%27d%20like%20to%20book%20High%20Fade.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
         </div>
 
         <div class="svc-row reveal">
           <div class="svc-name">Classic Cut</div>
           <div class="svc-desc">Traditional scissor-and-clipper cut, tailored to your shape.</div>
           <div class="svc-price">Price on Request</div>
-          <a href="booking.html" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
+          <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%27d%20like%20to%20book%20Classic%20Cut.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
         </div>
       </div>
     </div>
@@ -266,21 +265,21 @@
           <div class="svc-name">Beard Trim</div>
           <div class="svc-desc">Shape and tighten your beard line with precision detailing.</div>
           <div class="svc-price">Price on Request</div>
-          <a href="booking.html" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
+          <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%27d%20like%20to%20book%20Beard%20Trim.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
         </div>
 
         <div class="svc-row reveal">
           <div class="svc-name">Beard Shape</div>
           <div class="svc-desc">A full reshape for a sharper, more defined beard silhouette.</div>
           <div class="svc-price">Price on Request</div>
-          <a href="booking.html" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
+          <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%27d%20like%20to%20book%20Beard%20Shape.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
         </div>
 
         <div class="svc-row reveal">
           <div class="svc-name">Clean Shave</div>
           <div class="svc-desc">A close, traditional straight-edge finish.</div>
           <div class="svc-price">Price on Request</div>
-          <a href="booking.html" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
+          <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%27d%20like%20to%20book%20Clean%20Shave.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
         </div>
       </div>
     </div>
@@ -300,14 +299,14 @@
           <div class="svc-name">Hair Styling</div>
           <div class="svc-desc">Finish and styling to set your cut for the day ahead.</div>
           <div class="svc-price">Price on Request</div>
-          <a href="booking.html" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
+          <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%27d%20like%20to%20book%20Hair%20Styling.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
         </div>
 
         <div class="svc-row reveal">
           <div class="svc-name">Hair Designs</div>
           <div class="svc-desc">Custom line work and pattern detailing.</div>
           <div class="svc-price">Price on Request</div>
-          <a href="booking.html" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
+          <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%27d%20like%20to%20book%20Hair%20Designs.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
         </div>
       </div>
     </div>
@@ -327,7 +326,7 @@
           <div class="svc-name">Kids' Haircuts</div>
           <div class="svc-desc">A patient, precise cut tailored for younger clients.</div>
           <div class="svc-price">Price on Request</div>
-          <a href="booking.html" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
+          <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%27d%20like%20to%20book%20Kids%27%20Haircuts.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="btn btn-outline" style="padding:.6rem 1.1rem;font-size:.7rem">Book</a>
         </div>
       </div>
     </div>
@@ -350,7 +349,7 @@
       <div class="foot-cta reveal">
         <span class="eyebrow">Barber Boss &mdash; Kotobabi / Alajo</span>
         <h2 style="margin-top:1.2rem">SEE YOU<br>IN THE<br>CHAIR.</h2>
-        <a href="booking.html" class="btn btn-solid" style="margin-top:2.2rem">Book a Cut</a>
+        <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%20would%20like%20to%20book%20a%20haircut.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="btn btn-solid" style="margin-top:2.2rem">Book a Cut</a>
       </div>
       <div class="foot-grid">
         <div>
@@ -368,7 +367,7 @@
         <div>
           <h4>Book</h4>
           <a href="booking.html">Request a Cut</a>
-          <a href="https://wa.me/233257779054">WhatsApp</a>
+          <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%20would%20like%20to%20book%20a%20haircut.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener">WhatsApp</a>
           <a href="contact.html">Get Directions</a>
         </div>
         <div>

@@ -52,43 +52,42 @@
     /* ========================================
        TYPOGRAPHY
     ======================================== */
-    .eyebrow{font-family:var(--display);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px}
-    .eyebrow::before{content:'';width:26px;height:1px;background:var(--gold)}
+    .eyebrow{font-family:var(--display);font-weight:600;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center}
     h1,h2,h3{font-family:var(--display);font-weight:600;line-height:.94;letter-spacing:-.02em}
     .huge{font-size:clamp(3rem,9vw,8.2rem);font-weight:700}
     .lede{font-size:clamp(1.05rem,1.6vw,1.35rem);color:var(--cream-dim);max-width:38ch;font-weight:400;line-height:1.5}
     /* ========================================
        NAVIGATION
     ======================================== */
-    .site-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);display:flex;align-items:center;transition:background .5s var(--ease),border-color .5s var(--ease),backdrop-filter .5s var(--ease)}
+    .site-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);display:flex;align-items:center;transition:background .5s var(--ease),box-shadow .5s var(--ease),backdrop-filter .5s var(--ease)}
     .site-nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
-    .site-nav.is-scrolled{background:rgba(18,17,16,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .site-nav.is-scrolled{background:rgba(18,17,16,.86);backdrop-filter:blur(14px);box-shadow:0 12px 30px -14px rgba(0,0,0,.6)}
     .brand{font-family:var(--display);font-weight:700;font-size:1.15rem;letter-spacing:.02em}
     .brand span{color:var(--gold)}
     .nav-links{display:flex;gap:2.4rem;align-items:center}
-    .nav-links a{font-size:.86rem;letter-spacing:.03em;color:var(--cream-dim);position:relative;padding:4px 0}
-    .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--cream)}
-    .nav-links a[aria-current="page"]::after{content:'';position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--gold)}
-    .nav-cta{border:1px solid var(--gold);color:var(--cream);padding:.62rem 1.3rem;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-family:var(--display);transition:background .3s var(--ease),color .3s var(--ease)}
-    .nav-cta:hover{background:var(--gold);color:var(--ink)}
+    .nav-links a{font-size:.86rem;letter-spacing:.03em;color:var(--cream-dim);font-weight:500;transition:color .3s var(--ease)}
+    .nav-links a:hover{color:var(--cream)}
+    .nav-links a[aria-current="page"]{color:var(--gold);font-weight:700}
+    .nav-cta{background:var(--gold);color:var(--ink);padding:.68rem 1.5rem;border-radius:999px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-family:var(--display);font-weight:600;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s var(--ease);box-shadow:0 8px 20px -8px rgba(183,147,91,.55)}
+    .nav-cta:hover{transform:translateY(-2px);box-shadow:0 12px 26px -8px rgba(183,147,91,.7)}
     .burger{display:none;flex-direction:column;gap:5px;width:32px;z-index:210}
-    .burger span{height:1.5px;background:var(--cream);width:100%;transition:transform .35s var(--ease),opacity .35s var(--ease)}
+    .burger span{height:1.5px;background:var(--cream);width:100%;border-radius:2px;transition:transform .35s var(--ease),opacity .35s var(--ease)}
     .mobile-menu{position:fixed;inset:0;background:var(--ink);z-index:190;display:flex;flex-direction:column;justify-content:center;padding:0 8vw;transform:translateY(-100%);transition:transform .55s var(--ease);}
     .mobile-menu.is-open{transform:translateY(0)}
-    .mobile-menu a{font-family:var(--display);font-size:2.4rem;font-weight:600;padding:.5rem 0;border-bottom:1px solid var(--line);color:var(--cream)}
-    .mobile-menu .m-cta{margin-top:2rem;display:inline-block;border:1px solid var(--gold);padding:.9rem 1.6rem;font-family:var(--display);letter-spacing:.1em;text-transform:uppercase;font-size:.85rem}
+    .mobile-menu a{font-family:var(--display);font-size:2.4rem;font-weight:600;padding:.55rem 0;color:var(--cream)}
+    .mobile-menu .m-cta{margin-top:1.6rem;display:inline-block;background:var(--gold);color:var(--ink);border-radius:999px;padding:.9rem 1.8rem;font-family:var(--display);letter-spacing:.08em;text-transform:uppercase;font-size:.85rem;font-weight:600}
     body.menu-open{overflow:hidden}
     @media (max-width:900px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
     /* ========================================
        BUTTONS
     ======================================== */
-    .btn{font-family:var(--display);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;padding:1rem 1.9rem;display:inline-flex;align-items:center;gap:.6rem;transition:transform .35s var(--ease),background .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease)}
-    .btn-solid{background:var(--gold);color:var(--ink)}
-    .btn-solid:hover{background:var(--cream);transform:translateY(-2px)}
-    .btn-outline{border:1px solid var(--line);color:var(--cream)}
-    .btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
-    .btn-dark{border:1px solid var(--line-dark);color:var(--ink)}
-    .btn-dark:hover{background:var(--ink);color:var(--cream)}
+    .btn{font-family:var(--display);font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:1rem 2.1rem;border-radius:999px;display:inline-flex;align-items:center;gap:.6rem;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease),color .35s var(--ease)}
+    .btn-solid{background:linear-gradient(135deg,#c9a267,var(--gold));color:var(--ink);box-shadow:0 10px 26px -10px rgba(183,147,91,.65)}
+    .btn-solid:hover{transform:translateY(-3px);box-shadow:0 16px 34px -10px rgba(183,147,91,.8)}
+    .btn-outline{background:rgba(243,238,228,.07);color:var(--cream);box-shadow:0 6px 18px -12px rgba(0,0,0,.5)}
+    .btn-outline:hover{background:var(--gold);color:var(--ink);transform:translateY(-3px);box-shadow:0 14px 28px -10px rgba(183,147,91,.55)}
+    .btn-dark{background:rgba(18,17,16,.08);color:var(--ink)}
+    .btn-dark:hover{background:var(--ink);color:var(--cream);transform:translateY(-3px)}
     /* ========================================
        SEAL / SIGNATURE MARK
     ======================================== */
@@ -118,19 +117,19 @@
     /* ========================================
        BACK TO TOP
     ======================================== */
-    .totop{position:fixed;left:22px;bottom:22px;z-index:180;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s var(--ease),border-color .3s;background:rgba(18,17,16,.6);backdrop-filter:blur(6px)}
+    .totop{position:fixed;left:22px;bottom:22px;z-index:180;width:44px;height:44px;border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s var(--ease),transform .3s var(--ease);background:rgba(243,238,228,.1);backdrop-filter:blur(6px);box-shadow:0 8px 20px -10px rgba(0,0,0,.6)}
     .totop.show{opacity:1;pointer-events:auto}
-    .totop:hover{border-color:var(--gold)}
+    .totop:hover{background:var(--gold);color:var(--ink);transform:translateY(-2px)}
     /* ========================================
        FOOTER
     ======================================== */
-    footer{background:var(--ink-soft);border-top:1px solid var(--line);padding-top:min(12vw,7rem)}
+    footer{background:var(--ink-soft);padding-top:min(12vw,7rem)}
     .foot-cta h2{font-size:clamp(2.6rem,7vw,6rem)}
-    .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem;padding:5rem 0 3rem;border-top:1px solid var(--line);margin-top:5rem}
+    .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem;padding:3.4rem 3vw;border-radius:24px;background:rgba(243,238,228,.035);margin-top:5rem}
     .foot-grid h4{font-family:var(--display);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem}
     .foot-grid a,.foot-grid p{color:var(--cream-dim);font-size:.92rem;display:block;margin-bottom:.55rem}
     .foot-grid a:hover{color:var(--cream)}
-    .foot-bottom{border-top:1px solid var(--line);padding:1.6rem 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.78rem;color:var(--cream-dim)}
+    .foot-bottom{padding:1.6rem 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.78rem;color:var(--cream-dim)}
     .foot-bottom span{color:var(--gold)}
     @media (max-width:800px){.foot-grid{grid-template-columns:1fr 1fr;row-gap:2.5rem}}
     /* ========================================
@@ -147,14 +146,14 @@
     @media (max-width:900px){.booking-grid{grid-template-columns:1fr;gap:2.5rem}}
 
     .booking-side p{color:var(--cream-dim);max-width:36ch;margin-bottom:2rem}
-    .wa-box{border:1px solid var(--line);padding:1.6rem;display:flex;flex-direction:column;gap:1rem}
+    .wa-box{border-radius:20px;background:rgba(243,238,228,.04);padding:1.8rem;display:flex;flex-direction:column;gap:1rem}
     .wa-box h3{font-family:var(--display);font-size:1.05rem}
     .wa-box a{display:inline-flex;align-items:center;gap:.6rem;color:var(--gold);font-family:var(--display);font-size:.82rem;letter-spacing:.06em;text-transform:uppercase}
 
-    .field{display:grid;gap:.5rem;margin-bottom:1.5rem}
+    .field{display:grid;gap:.5rem;margin-bottom:1.3rem}
     .field label{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cream-dim)}
-    .field input,.field select,.field textarea{background:transparent;border:none;border-bottom:1px solid var(--line);padding:.7rem 0;color:var(--cream);font-size:1rem;transition:border-color .3s}
-    .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+    .field input,.field select,.field textarea{background:rgba(243,238,228,.055);border:none;border-radius:14px;padding:.95rem 1.1rem;color:var(--cream);font-size:1rem;transition:background .3s,box-shadow .3s}
+    .field input:focus,.field select:focus,.field textarea:focus{background:rgba(243,238,228,.09);box-shadow:0 0 0 2px var(--gold)}
     .field textarea{resize:vertical;min-height:90px}
     .field select option{background:var(--ink)}
     .row-2{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
@@ -162,7 +161,7 @@
 
     #bookingForm{transition:opacity .4s var(--ease),transform .4s var(--ease)}
     #bookingForm.hide{opacity:0;transform:translateY(-10px);pointer-events:none;position:absolute;visibility:hidden}
-    .success-box{display:none;border:1px solid var(--gold);padding:2.4rem;text-align:left}
+    .success-box{display:none;border-radius:20px;background:rgba(183,147,91,.1);padding:2.4rem;text-align:left}
     .success-box.show{display:block;animation:successIn .6s var(--ease)}
     @keyframes successIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
     .success-box h3{font-family:var(--display);font-size:1.6rem;color:var(--gold);margin-bottom:.8rem}
@@ -186,7 +185,7 @@
         <a href="booking.html" aria-current="page">Booking</a>
         <a href="contact.html" >Contact</a>
       </div>
-      <a href="booking.html" class="nav-cta">Book a Cut</a>
+      <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%20would%20like%20to%20book%20a%20haircut.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="nav-cta">Book a Cut</a>
       <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
@@ -200,7 +199,7 @@
     <a href="about.html">About</a>
     <a href="booking.html">Booking</a>
     <a href="contact.html">Contact</a>
-    <a href="booking.html" class="m-cta">Book a Cut</a>
+    <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%20would%20like%20to%20book%20a%20haircut.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="m-cta">Book a Cut</a>
   </div>
 
 
@@ -271,12 +270,12 @@
           <label for="fmsg">Additional Message</label>
           <textarea id="fmsg" name="fmsg" placeholder="Anything Barber Boss should know?"></textarea>
         </div>
-        <button type="submit" class="btn btn-solid">Request a Cut</button>
+        <button type="submit" class="btn btn-solid">Request via WhatsApp</button>
       </form>
 
       <div class="success-box" id="successBox">
-        <h3>Request Received.</h3>
-        <p>Your request has been received. Barber Boss will contact you to confirm availability.</p>
+        <h3>Sent to WhatsApp.</h3>
+        <p>Your request has been opened in WhatsApp &mdash; send the message and Barber Boss will confirm availability directly.</p>
       </div>
     </div>
   </section>
@@ -291,7 +290,7 @@
       <div class="foot-cta reveal">
         <span class="eyebrow">Barber Boss &mdash; Kotobabi / Alajo</span>
         <h2 style="margin-top:1.2rem">SEE YOU<br>IN THE<br>CHAIR.</h2>
-        <a href="booking.html" class="btn btn-solid" style="margin-top:2.2rem">Book a Cut</a>
+        <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%20would%20like%20to%20book%20a%20haircut.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener" class="btn btn-solid" style="margin-top:2.2rem">Book a Cut</a>
       </div>
       <div class="foot-grid">
         <div>
@@ -309,7 +308,7 @@
         <div>
           <h4>Book</h4>
           <a href="booking.html">Request a Cut</a>
-          <a href="https://wa.me/233257779054">WhatsApp</a>
+          <a href="https://wa.me/233257779054?text=Hello%20Barber%20Boss%2C%20I%20would%20like%20to%20book%20a%20haircut.%20Please%20let%20me%20know%20your%20available%20times." target="_blank" rel="noopener">WhatsApp</a>
           <a href="contact.html">Get Directions</a>
         </div>
         <div>
@@ -393,14 +392,31 @@
 
 
     // ========================================
-    // BOOKING FORM
+    // BOOKING FORM — SUBMITS VIA WHATSAPP
     // ========================================
     const bookingForm = document.getElementById('bookingForm');
     const successBox = document.getElementById('successBox');
+    const WA_NUMBER = '233257779054';
     if (bookingForm) {
       bookingForm.addEventListener('submit', (e) => {
         e.preventDefault();
         if (!bookingForm.checkValidity()) { bookingForm.reportValidity(); return; }
+
+        const val = (id) => document.getElementById(id).value.trim();
+        const lines = [
+          'Hello Barber Boss, I would like to book a cut.',
+          `Name: ${val('fname')}`,
+          `Phone: ${val('fphone')}`,
+        ];
+        if (val('femail')) lines.push(`Email: ${val('femail')}`);
+        if (val('fservice')) lines.push(`Service: ${val('fservice')}`);
+        if (val('fdate')) lines.push(`Preferred Date: ${val('fdate')}`);
+        if (val('ftime')) lines.push(`Preferred Time: ${val('ftime')}`);
+        if (val('fmsg')) lines.push(`Message: ${val('fmsg')}`);
+
+        const text = encodeURIComponent(lines.join('\n'));
+        window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, '_blank');
+
         bookingForm.classList.add('hide');
         successBox.classList.add('show');
       });
